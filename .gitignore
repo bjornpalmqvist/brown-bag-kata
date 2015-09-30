@@ -13,4 +13,9 @@ hs_err_pid*
 
 #IDE
 .idea
-lunch-kata.iml
+*.iml
+.metadata
+.settings
+.project
+.classpath
+.recommenders
