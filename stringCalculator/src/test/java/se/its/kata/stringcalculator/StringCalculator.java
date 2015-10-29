@@ -1,4 +1,4 @@
-package se.jonananas.tdd.stringCalculator;
+package se.its.kata.stringcalculator;
 
 public class StringCalculator {
 	

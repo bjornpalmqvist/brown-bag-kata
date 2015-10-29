@@ -2,12 +2,11 @@
  * Implementation of Roy Osheroves string calculator kata
  * @see http://osherove.com/tdd-kata-1/ 
  */
-package se.jonananas.tdd.stringCalculator;
+package se.its.kata.stringcalculator;
 
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 
