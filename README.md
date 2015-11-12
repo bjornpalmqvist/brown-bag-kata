@@ -1,4 +1,4 @@
-TS Lunch-kator
+# ITS Lunch-kator
 
 Målsättningen med lunch-kata är följande
 
