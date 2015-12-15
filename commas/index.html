@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" ng-app="kata">
+<head>
+  <meta charset="utf-8">
+  <title>Commas</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="app/app.css">
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="app/app.js"></script>
+</head>
+<body ng-controller="ItemCtrl">
+
+  <div class="container">
+    <h1>Two: {{1 + 1}}<h1>
+    <h2>Items: {{ items | commaSeparated }}</h2>
+  </div>
+
+</body>
+</html>
