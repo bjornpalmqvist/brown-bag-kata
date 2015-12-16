@@ -5,6 +5,10 @@ angular.module('kata', [])
 })
 
 .filter('commaSeparated', function() {
-  return function() {
+  return function(items) {
+    if(angular.isArray(items) && items.length) {
+      return items.join(', ');
+    }
+    return items;
   };
 })
