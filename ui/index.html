@@ -2,7 +2,7 @@
 <html lang="en" ng-app="kata">
 <head>
   <meta charset="utf-8">
-  <title>Commas</title>
+  <title>Kata: Kommaseparerat</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="app/app.css">
   <script src="bower_components/angular/angular.js"></script>
@@ -11,8 +11,38 @@
 <body ng-controller="ItemCtrl">
 
   <div class="container">
-    <h1>Two: {{1 + 1}}<h1>
-    <h2>Items: {{ items | commaSeparated }}</h2>
+    <h1>Kommaseparerat</h1>
+    <p>I denna kata ska vi öva på testdriven javascriptutveckling med Karma, Jasmine och AngularJS</p>
+    <p>Målet är att från en javascript-array skriva ut elementen som en kommaseparerad sträng med hjälp av ett angular-filter. Filtret anropas med lodstreck (pipa) i vår html-template
+        enligt exemplet nedan.</p>
+      <dl>
+          <dt>Javascript-modell $scope definierad i en angular-controller (se app.js)</dt>
+            <dd><pre>$scope.items = {{items | json}}</pre></dd>
+          <dt>Html-template har tillgång till variabler definierade i $scope och kan eka ut dessa med dubbla måsvingar</dt>
+            <dd><pre ng-non-bindable>{{ items | commaSeparated }}</pre></dd>
+      </dl>
+
+    <p>Meningen är att denna instruktionssida inte ska behöva användas för att bekräfta att implementationen av filtret utförts
+        korrekt. Karma/Jasmine-testerna bör vara tillräckligt.</p>
+
+    <dl>
+        <dt>Förväntat</dt>
+            <dd><pre>Alpha, Bravo, Charlie, Delta</pre></dd>
+        <dt>Faktiskt</dt>
+            <dd><pre>{{ items | commaSeparated }}</pre></dd>
+    </dl>
+
+    <h2>Kata</h2>
+    <ol>
+        <li>Skriv ett kanariefågel-test</li>
+        <li>Skriv tester i app.spec.js</li>
+        <li>Implementera filter i app.js</li>
+        <li>Kör testerna kontinuerligt med <code>npm test</code></li>
+    </ol>
+
+    <p>Som avslutning, starta webbserver med <code>npm start</code> och visa denna sida via <code>http://localhost:8000</code></p>
+
+    <p class="alert alert-warning">Definiera också vad filtret gör när indata inte är en array!</p>
   </div>
 
 </body>
