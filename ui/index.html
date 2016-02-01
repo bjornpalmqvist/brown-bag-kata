@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" ng-app="kata">
+<head>
+  <meta charset="utf-8">
+  <title>Kata: Bokstavering</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="app/app.css">
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="app/app.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Bokstavering</h1>
+    <p>I denna kata ska vi öva på testdriven javascriptutveckling med Karma, Jasmine och AngularJS</p>
+    <p>Målet är att bokstavera inmatningen från ett inmatningsfält med det internationella bokstaveringsalfabetet. </p>
+    <p>Tänk att du sitter i telefon med någon engelsktalande som aldrig har sett ditt namn, men behöver kommunicera det för att din adress ska bli rätt.</p>
+
+      <dl>
+          <dt>Standardfält för inmatning i html bundet till en variabel via angular-attributet ng-model</dt>
+            <dd><pre>&lt;input ng-model="alpha"/&gt;</pre></dd>
+          <dt>Html-template har tillgång till variabler definierade av ng-model och kan eka ut dessa med dubbla måsvingar</dt>
+            <dd><pre ng-non-bindable>{{ alpha | spell }}</pre></dd>
+      </dl>
+
+    <p>Meningen är att denna instruktionssida inte ska behöva användas för att bekräfta att implementationen av filtret utförts
+        korrekt. Karma/Jasmine-testerna bör vara tillräckligt.</p>
+
+    <div>
+      <label>Förväntat</label>
+      <input value="bergström" readonly class="form-control"/>
+      <p class="alert alert-success">bravo, echo, romeo, golf, sierra, tango, romeo, oscar, echo, mike</p>
+    </div>
+
+    <div>
+      <label>Faktiskt</label>
+      <input ng-model="alpha" class="form-control"/>
+      <p class="alert alert-success">{{ alpha | spell }}</p>
+    </div>
+
+    <h2>Kata</h2>
+    <ol>
+        <li>Skriv ett kanariefågel-test</li>
+        <li>Skriv tester i spell.spec.js</li>
+        <li>Implementera filter i app.js</li>
+        <li>Kör testerna kontinuerligt med <code>npm test</code></li>
+    </ol>
+
+    <p>Som avslutning, starta webbserver med <code>npm start</code> och visa denna sida via <code>http://localhost:8000</code></p>
+  </div>
+
+</body>
+</html>
