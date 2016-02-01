@@ -5,4 +5,8 @@ describe('Spelling', function() {
   beforeEach(inject(function(spellFilter) {
       spell = spellFilter;
   }));
+
+  it('canary', function() {
+    expect(true).toBe(true);
+  });
 });
