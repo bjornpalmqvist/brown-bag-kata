@@ -20,4 +20,4 @@ För att komma igång med utvecklingen, kör följande inuti UI-katalogen.
 
 * `npm install` <- installerar beroenden för att utveckla i java (motsvarar ungefär maven compile)
 * `npm test` <- startar Karma (motsvarar JUnitRunner)
-* `npm start` <- startar en enkel webbserver på port localhost:8000
+* `npm start` <- startar en enkel webbserver på localhost:8000
