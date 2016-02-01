@@ -13,8 +13,19 @@ angular.module('kata', [])
   };
 })
 
-.filter('spell', function() {
-  return function() {
+.filter('spell', function(phoneticAlphabet) {
+  return function(str) {
+    if(!angular.isString(str)) {
+      return str;
+    }
+    var phonetics = [];
+    str.toUpperCase().split('').forEach(function(alpha) {
+      var phonetic = phoneticAlphabet[alpha];
+      if(phonetic) {
+        phonetics.push(phonetic);
+      }
+    });
+    return phonetics;
   };
 })
 
